@@ -1,0 +1,41 @@
+<nav
+  class="flex items-baseline justify-between mb-4 pb-4 border-b-slate-700/75 border-b-[0.5px]"
+>
+  <div class="flex items-baseline">
+    <div class="flex items-baseline">
+      <img
+        i18n-alt
+        alt="azcadea logo"
+        src="assets/logo.svg"
+        class="w-[50px] h-[50px] block relative top-2"
+      />
+
+      <h1 class="text-3xl font-light" i18n>azcadea</h1>
+    </div>
+
+    <ul
+      class="flex items-baseline ltr:ml-8 rtl:mr-8 font-light"
+    >
+      <li class="ltr:mr-4 rtl:ml-4">
+        <a
+          routerLink="/"
+          routerLinkActive="font-semibold"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ home }}</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="font-semibold"
+          i18n
+          >About</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="justify-self-end">
+    <app-locale-switcher></app-locale-switcher>
+  </div>
+</nav>
